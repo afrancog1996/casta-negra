@@ -1,8 +1,15 @@
 <div class="container-fluid">
-  <mat-toolbar class="row home-navbar justify-content-center">
-    <img src="../assets/icono.jpeg" alt="casta-negra" class="img-toolbar">
-  </mat-toolbar>
-  <div class="row justify-content-center">
-    <img src="../assets/formato-3.png" alt="home-casta-negra" class="img-home">
-  </div>
+  <ng-container *ngIf="!isMobile; else showMobile">
+    <mat-toolbar class="row home-navbar justify-content-center">
+      <img src="../assets/icono.jpeg" alt="casta-negra" class="img-toolbar">
+    </mat-toolbar>
+    <div class="row justify-content-center">
+      <img src="../assets/formato-3.png" alt="home-casta-negra" class="img-home">
+    </div>
+  </ng-container>
+  <ng-template #showMobile>
+    <div class="row justify-content-center">
+      <img src="../assets/icono.jpeg" alt="casta-negra" class="img-toolbar-mobile">
+    </div>
+  </ng-template>
 </div>
