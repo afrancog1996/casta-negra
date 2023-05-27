@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'casta-negra';
 
   windowWidth: number;
+  isScrollDisabled: boolean = false;
   isMobile: boolean;
 
   constructor() {
@@ -22,5 +23,16 @@ export class AppComponent {
     console.log(this.windowWidth);
     console.log(this.isMobile);
     this.isMobile = this.windowWidth < 868;
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event: Event) {
+    if (this.isScrollDisabled) {
+      window.scrollTo(0, 0); // Desplaza la ventana al principio para mantenerla en la parte superior
+    }
+  }
+
+  toggleScroll() {
+    this.isScrollDisabled = !this.isScrollDisabled;
   }
 }
