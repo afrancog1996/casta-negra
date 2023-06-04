@@ -1,3 +1,9 @@
+<ng-container *ngIf="isVisible">
+  <div class="container-loading">
+      <img src="../assets/Casta-Negra_Web_Loading-Page_01.gif" alt="casta-negra" class="loading-gif">
+  </div>
+</ng-container>
+
 <div class="container-fluid">
   <ng-container *ngIf="!isMobile; else showMobile">
     <mat-toolbar class="row home-navbar justify-content-center">
@@ -10,7 +16,7 @@
 </div>
 
 <ng-template #showMobile>
-  <div class="container" (click)="toggleScroll()">
+  <div class="container-fluid container-img" (click)="toggleScroll()" *ngIf="!isVisible">
     <div class="row justify-content-center">
       <img src="../assets/icono.jpeg" alt="casta-negra" class="img-toolbar-mobile">
     </div>

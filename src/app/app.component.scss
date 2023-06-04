@@ -1,22 +1,45 @@
-.home-navbar{
+.home-navbar {
     border-bottom: 2px solid #ff6550;
     height: 160px;
-    background-color: rgb(1,1,1);
+    background-color: rgb(1, 1, 1);
     color: white;
-    
-    .img-toolbar{
+
+    .img-toolbar {
         height: 123px;
         width: 146px;
     }
 }
 
-.img-home{
+.img-home {
     width: 50rem;
     height: 50rem;
+    transition: 2s;
 }
 
 
 .img-toolbar-mobile {
     margin-top: 50%;
     width: 100%;
+}
+
+.container-img {
+    background-color: rgb(1, 1, 1);
+    height: 99rem !important;
+}
+
+
+.container-loading {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+    background-color: rgb(1, 1, 1);
+    opacity: 0.95;
+    transition: 4s;
+
+    .loading-gif {
+        align-self: center;
+    }
 }
