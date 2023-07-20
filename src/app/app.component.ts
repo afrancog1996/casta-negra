@@ -12,6 +12,10 @@ export class AppComponent implements OnInit{
   isScrollDisabled: boolean = false;
   isMobile: boolean;
   isVisible: boolean = true;
+  color = 'warn';
+  mode = 'indeterminate';
+  value = 50;
+  bufferValue = 75;
 
   constructor() {
     this.isMobile = window.innerWidth < 868;
@@ -28,8 +32,6 @@ export class AppComponent implements OnInit{
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     this.windowWidth = window.innerWidth;
-    console.log(this.windowWidth);
-    console.log(this.isMobile);
     this.isMobile = this.windowWidth < 868;
   }
 

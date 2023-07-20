@@ -10,6 +10,20 @@
       <img src="../assets/icono.jpeg" alt="casta-negra" class="img-toolbar">
     </mat-toolbar>
     <div class="row justify-content-center">
+      <div class="col-3 text-center">
+        <h2>Próximamente</h2>
+      </div>
+      <div class="col-12">
+          <mat-progress-bar
+          class="example-margin"
+          [color]="color"
+          [mode]="mode"
+          [value]="value"
+          [bufferValue]="bufferValue">
+      </mat-progress-bar>
+      </div>
+    </div>
+    <div class="row justify-content-center">
       <img src="../assets/formato-2.jpeg" alt="home-casta-negra" class="img-home">
     </div>
   </ng-container>
@@ -19,6 +33,20 @@
   <div class="container-fluid container-img" (click)="toggleScroll()" *ngIf="!isVisible">
     <div class="row justify-content-center">
       <img src="../assets/icono.jpeg" alt="casta-negra" class="img-toolbar-mobile">
+    </div>
+    <div class="row justify-content-center">
+      <div class="text-center">
+        <h2>Próximamente</h2>
+      </div>
+      <div class="col-12">
+          <mat-progress-bar
+          class="example-margin"
+          [color]="color"
+          [mode]="mode"
+          [value]="value"
+          [bufferValue]="bufferValue">
+      </mat-progress-bar>
+      </div>
     </div>
   </div>
 </ng-template>
