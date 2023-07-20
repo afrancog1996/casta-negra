@@ -14,8 +14,8 @@ export class AppComponent implements OnInit{
   isVisible: boolean = true;
   color = 'warn';
   mode = 'indeterminate';
-  value = 50;
-  bufferValue = 75;
+  value = 100;
+  bufferValue = 90;
 
   constructor() {
     this.isMobile = window.innerWidth < 868;

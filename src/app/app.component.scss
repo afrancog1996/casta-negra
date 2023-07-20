@@ -10,6 +10,15 @@
     }
 }
 
+h2 {
+    color: white;
+}
+
+.mat-progress-bar.mat-warn .mat-progress-bar-buffer {
+    background-color: #dc3545 !important;
+    color: #dc3545 !important;
+}
+
 .img-home {
     width: 50rem;
     height: 48rem;
